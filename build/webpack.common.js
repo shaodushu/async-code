@@ -2,8 +2,8 @@ const ProgressBarPlugin = require("progress-bar-webpack-plugin");
 const chalk = require("chalk");
 const path = require('path')
 
-// const APP_PATH = path.resolve(__dirname, '..')
-// const APP_SRC = path.resolve(APP_PATH, 'src')
+const APP_PATH = path.resolve(__dirname, '..')
+const APP_SRC = path.resolve(APP_PATH, 'src')
 
 module.exports = {
     // mode: 'production',
@@ -56,9 +56,10 @@ module.exports = {
                     },
                     {
                         loader: require.resolve('../loader/resources-to-sass.js'),
-                        // options: {
-                        //     resources: [path.resolve(APP_SRC, 'variable.module.scss'), path.resolve(APP_SRC, 'mixins.scss')]
-                        // }
+                        options: {
+                            // resources: [path.resolve(APP_SRC, 'variable.module.scss'), path.resolve(APP_SRC, 'mixins.scss')]
+                            resources:[path.resolve(APP_SRC, 'variable.module.scss')]
+                        }
                     },
                 ]
             },
