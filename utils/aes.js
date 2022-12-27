@@ -23,4 +23,4 @@ const decrypt = (text) => {
 
 // decrypt(encrypt("hello aes!")); // hello aes!
 // console.log(encrypt("hello aes!"));
-exports.aes = { encrypt, decrypt };
+module.exports = { encrypt, decrypt };
